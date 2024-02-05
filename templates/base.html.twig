@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Soeureinement</title>
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+        <link href="{{ asset('/img/logoSoeur.png') }}" type="image/x-icon" rel="soeur icon">
+    <body>
+        <header>
+            <div>
+                <img src="{{ asset('/img/logoSoeur.png') }}" alt="logo Soeureinement">
+                <p>soeureinement</p>
+            </div>
+            <nav>
+                <ul>
+                     <li><a href="{{ path('app_index') }}">Accueil</a></li> 
+                    <li><a href="{{ path('app_hike') }}">Nos randonnées</a></li>
+                    <li><a href="{{ path('app_conseils') }}">Conseils</a></li>
+                    <li>|</li>
+                     <li><a href="{{ path('app_login') }}"><img src="{{ asset('/icones/icoConex.png') }}" alt="#Connexion"></a></li> 
+                </ul>
+            </nav>
+        </header>  
+        {% block body %}{% endblock %}
+        <footer>
+            <section>
+                <div>
+                    <img src="{{ asset('/img/logoSoeur.png') }}" alt="logo Soeureinement">
+                    <p class="firstli">Soeureinement</p>
+                </div>
+                <ul>
+                    <li class="firstLiFooter">Nos randonnées<a href="#"></a></li>
+                    <li>Facile<a href="#"></a></li>
+                    <li>Moyen<a href="#"></a></li>
+                    <li>Difficile<a href="#"></a></li>
+                </ul>
+                <ul>
+                    <li class="firstLiFooter">Nos conseils <a href="#"></a></li>
+                    <li>Equipements<a href="#"></a></li>
+                    <li>Santé<a href="#"></a></li>
+                    <li>Tous les conseils<a href="#"></a></li>
+                </ul>
+                <ul>
+                    <li class="firstLiFooter">Soeureinement<a href="#"></a></li>
+                    <li><a href="mailto: soeureinement.rando@gmail.com">Contact</a></li>
+                    <li><a href="{{ asset('/pages/connexion.php') }}">Se connecter</a></li>
+                    <li><a href="{{ asset('/pages/inscription.php') }}">S'inscrire</a></li>
+                </ul>
+                <ul id="NousSuivre">
+                    <li class="firstLiFooter">Nous suivre</li>
+                    <li><a href="http://www.instagram.com/Soeureinement" target="_blank"><img  id=logoinsta src="{{ asset('/icones/icoInsta.png') }}" alt=""></a></li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Design by Hidden figures</a></li>
+                    <li><img id="logoshoes" src="{{ asset('/icones/shoes.png') }}" alt=""> <a href="#"></a></li>
+                </ul>
+            </section>
+        </footer>
+        <script src="{{ asset('/js/script.js') }}"></script>
+    </body>
+</html>

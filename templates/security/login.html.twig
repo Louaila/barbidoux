@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+    <main id="mainConnexion">
+    <!-------------container de tous les divs---------------------------------------------------------------------------->
+    <div id="container">
+        <div id="conInsc">
+            <!------------------------------------Titre de la page-------------------------------------------------------->
+            <h1 class="h1Titre">Je me connecte</h1>
+            <!------------------------------------Formulaire de connexion------------------------------------>
+    <label for="inputMailUser">Mail User</label>
+    <input type="text" value="{{ last_username }}" name="mailUser" id="inputMailUser" class="form-control" autocomplete="username" required autofocus>
+    <label for="inputPassword">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+
+    <button id ="btnSeConnecter" type="submit">
+        Sign in
+    </button>
+        <a class="modifMdp" href="">
+                Modifier mot de passe
+            </a>
+            <!-------------------------------------Ligne vert qui separe mdp du boutton ------------------------>
+            <hr>
+            <p>Je n'ai pas encore de compte?</p><br>
+            <!-------------------Button clicable qui deploie le formulaire d'insciption au clic-------------------------->
+            <a id="btnJeMinscris" href="{{ path('app_register') }}">Je m'inscris</a>
+        </div>
+    </div>
+
+    <figure>
+        <img class="imgConnex" src="/img/photoConnexion2.png"alt="Image connexion un prés vert">
+    </figure>
+</main>
+<!---------------------------------------------------"END OF  MAIN"-------------------------------------------->
+</form>
+{% endblock %}
