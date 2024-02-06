@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<main id="mainTdeBord">
+        <section id="imgNomUser">
+            <figure>
+                 {# <img src="{{ asset('/img/cisse.JPG')}}"alt="Photo User"> #}
+            </figure>
+            <div>
+                <p>Cisse</p>
+            </div>
+        </section>
+        <section id="infoUser">
+            <div id="mesButton">
+                <button id="bMesRandos">Mes randonnées</button>
+                <button id="bProfil">Profil</button>
+                <button id="bMesObj">Mes objectifs</button>
+            </div>
+            <div id="mesRandos">
+                <div class="pastRando">
+                    <figure><img src="{{ asset('/img/Saintjanscappel.JPG')}}" alt="Saint Jans Cappel"></figure>
+                    <div class="infoRando">
+                        <p>Ma randonnée du 08/08/23</p>
+                        <p>Le mont des récollets - Cassel</p>
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <button>Ajouter un avis</button>
+                    </div>
+                </div>
+                <div class="pastRando">
+                    <figure><img src="/img/Saintjanscappel.JPG" alt="Saint Jans Cappel"></figure>
+                    <div class="infoRando">
+                        <p>Ma randonnée du 08/08/23</p>
+                        <p>Le mont des récollets - Cassel</p>
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <button>Ajouter un avis</button>
+                    </div>
+                </div>
+            </div>
+           
+            <div id="modifUser">
+                <div id="formUser">
+
+<h1>FOMURLAIRE</h1>
+
+  {{ form_errors(updateForm) }}
+    {{ form_start(updateForm) }}
+        {{ form_row(updateForm.mailUser) }}
+        {{ form_row(updateForm.lastnameUser) }}
+        {{ form_row(updateForm.nameUser) }}    
+        {{ form_row(updateForm.nName) }}
+        <!-- Add other form fields as needed -->
+        <button type="submit" class="btn">Update</button>
+    {{ form_end(updateForm) }}
+
+<h1>FIN FOMURLAIRE</h1>
+
+                </div>
+            </div>
+            <div id="Objectifs">
+                <div id="objUser">
+                    <div class="ajoutObj">
+                        <input placeholder="Ajouter un objectif" type="text" id="addObj" name="addObj" value=""
+                            size="70"></input>
+                        <button id="objButton">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
