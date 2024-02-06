@@ -12,7 +12,9 @@ use App\Form\TableauBordType;
 
 class UserController extends AbstractController
 {
-    #[Route(path: '/login', name: 'app_login')]
+    /**
+     * @Route("/login", name="app_login")
+     */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         if ($this->getUser()) {
@@ -71,3 +73,5 @@ class UserController extends AbstractController
 
 
 }
+
+
