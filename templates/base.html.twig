@@ -5,6 +5,7 @@
         <title>Soeureinement</title>
         <meta name="viewport" content="width=, initial-scale=1.0">
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('/fonts/yesevaone-regular2.woff') }}">
         <link href="{{ asset('/img/logoSoeur.png') }}" type="image/x-icon" rel="soeur icon">
     <body>
         <header>
@@ -23,6 +24,7 @@
             </nav>
         </header>  
         {% block body %}{% endblock %}
+                                                            {# FOOTER#}
         <footer>
             <section>
                 <div>
@@ -30,13 +32,13 @@
                     <p class="firstli">Soeureinement</p>
                 </div>
                 <ul>
-                    <li class="firstLiFooter">Nos randonnées<a href="#"></a></li>
+                    <li class="firstLiFooter">Nos randonnées<a href="{{ path('app_hike') }}"></a></li>
                     <li>Facile<a href="#"></a></li>
                     <li>Moyen<a href="#"></a></li>
                     <li>Difficile<a href="#"></a></li>
                 </ul>
                 <ul>
-                    <li class="firstLiFooter">Nos conseils <a href="#"></a></li>
+                    <li class="firstLiFooter">Nos conseils<a href="{{ path('app_conseils') }}"></a></li>
                     <li>Equipements<a href="#"></a></li>
                     <li>Santé<a href="#"></a></li>
                     <li>Tous les conseils<a href="#"></a></li>
@@ -44,8 +46,8 @@
                 <ul>
                     <li class="firstLiFooter">Soeureinement<a href="#"></a></li>
                     <li><a href="mailto: soeureinement.rando@gmail.com">Contact</a></li>
-                    <li><a href="{{ asset('/pages/connexion.php') }}">Se connecter</a></li>
-                    <li><a href="{{ asset('/pages/inscription.php') }}">S'inscrire</a></li>
+                    <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+                    <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
                 </ul>
                 <ul id="NousSuivre">
                     <li class="firstLiFooter">Nous suivre</li>
@@ -56,7 +58,7 @@
                 <ul>
                     <li><a href="#">Mentions légales</a></li>
                     <li><a href="#">Design by Hidden figures</a></li>
-                    <li><img id="logoshoes" src="{{ asset('/icones/shoes.png') }}" alt=""> <a href="#"></a></li>
+                    <li><img id="logoshoes" src="{{ asset('/icones/shoes.png') }}" alt=""><a href="{{ path('app_index') }}"></a></li>
                 </ul>
             </section>
         </footer>

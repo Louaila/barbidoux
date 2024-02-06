@@ -21,11 +21,11 @@ p{
 /*******************************************************FONTS*******************************************/
 @font-face {
     font-family: 'yesevaOne';
-    src: url('/fonts/YesevaOne-Regular.eot');
-    src: url('/fonts/YesevaOne-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/YesevaOne-egular.woff2') format('woff2'),
-        url('/fonts/YesevaOne-Regular.woff') format('woff'),
-        url('/fonts/YesevaOne-Regular.ttf') format('truetype');
+    src: url('../fonts/YesevaOne-Regular.eot');
+    src: url('../fonts/YesevaOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YesevaOne-Regular1.woff2') format('woff2'),
+        url('../fonts/YesevaOne-Regular2.woff') format('woff'),
+        url('../fonts/YesevaOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -238,14 +238,16 @@ h4 {
     color: #c68d5e;
     font-size: 40px;
     text-indent:-5% ;
-    border-radius: 2px solid black;
-    }
+    font-family: yesevaOne;
+
+}
     
-#mainIndex.secondLineTitle{
+#mainIndex .secondLineTitle{
     color: #4b570d;
      margin-bottom: 5px;
      padding: 20px;
     font-size: 60px;
+    font-family: yesevaOne;
 }
 /******************************************DEBUT SECTION 1********************************/
 #mainIndex section:nth-of-type(1) {
