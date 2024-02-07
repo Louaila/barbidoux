@@ -11,12 +11,14 @@ html{
 a{
     text-decoration: none;
     color: #4B570D;
+    font-family: ralewayRegular;
 }
 ul{
     list-style: none;
 }
 p{
     color:#683614 ;
+    font-family: ralewayRegular;
 }
 /*******************************************************FONTS*******************************************/
 @font-face {
@@ -67,7 +69,7 @@ p{
     font-family: 'ralewayRegular';
     src: url('../fonts/Raleway-Regular.eot');
     src: url('../fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Raleway-Regular.woff2') format('woff2'),
+        url('../fonts/Raleway-Regular2.woff2') format('woff2'),
         url('../fonts/Raleway-Regular.woff') format('woff'),
         url('../fonts/Raleway-Regular.ttf') format('truetype');
     font-weight: normal;
@@ -128,6 +130,7 @@ header nav ul a{
     font-size: 16px;
     text-decoration: none;
     color: #4B570D;
+    font-family: ralewayRegular;
 }
 header nav ul li:nth-child(4) {/***petit trait */
     color: #683614; /* Couleur marron */
@@ -215,6 +218,7 @@ h4 {
     color: #c68d5e;
     margin-top: 15px;
     font-size: 25px;
+    font-family: ralewayRegular;
 }
 
 #mainIndex .texte h2 {
@@ -263,6 +267,7 @@ h4 {
     color: #4B570D;
     font-size: 60px;
     margin-bottom: 10px;
+    font-family: yesevaOne;
 }
 #mainIndex section:nth-of-type(1) .texte {
     margin-left: 70px;
@@ -1279,3 +1284,108 @@ background-color: #FFF7EE;
     border-radius: 20px;
   
 }
+/*******************************************Début mentions légales***************************************************/
+/*********Titre de la page******************/
+#mainMentions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("/img/barbapapaadmin.png");
+    background-size:contain; /*prend la taille de conteneur */
+    background-position: right;
+    background-repeat: no-repeat;
+   
+}
+#mainMentions .firstLineTitle{
+    color: #c68d5e;
+    font-size: 50px;
+    text-align: center;
+    text-indent: -10%;
+    
+}  
+#mainMentions .secondLineTitle{
+    color: #4b570d;
+    margin-bottom: 5px;
+    padding: 20px;
+    font-size: 60px;
+    text-align: center;
+}
+.scroll-section {
+    max-height: 70vh;
+    overflow-y: scroll;
+    text-align: justify;
+    padding: 20px;
+    margin:5%;
+}
+.gros-paragraphe {
+    font-size: 18px; /* Ajustez la taille de police selon vos besoins */
+    line-height: 1.52; /* Utilisez un nombre pour le multiple de la taille de police */
+    /* Ou utilisez une valeur fixe comme line-height: 24px; */
+}
+/*************DEBUT PAGE NOTRE HISTOIRE*******/
+body {
+    background-color: #FFF7EE;
+    height: 100vh;
+}
+/**** Il y a 2 élements dont une image dans cette section d'ou l'utilisation de space-between 
+        contrairement a la section 2 ou il n'y a pas d'image donc j'ai utilisé un space-around pour que ca soit 
+        plus aéré****/
+/* section {
+    height: 80vh;
+    /* width: 100vh; */
+#section1 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#section2 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 60px;
+    align-items: center;
+    
+}
+#section3 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-top: 30px;
+    align-items: center;
+}
+/****Taille de la photo de groupe*****/
+.photoGroupe {
+    height: 80vh;
+    margin-right: 0px;
+    border-radius: 10px;
+}
+.pontForêt{
+    height: 80vh;
+    border-radius: 10px;
+}
+.montDesRecollets {
+    height: 80vh;
+    margin-bottom: 60px;
+    margin-right: 60px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+/*******Pour donner une forme aux paragraphes******/
+.paragraphe {
+    width: 110vh;
+    display: flex;
+    flex-direction: column;  
+    padding-bottom: 50px;
+    padding-left: 50px;
+    
+}
+h1 {
+    color: #4b570d;
+    font-size: 50px; 
+}
+h1::first-line{
+    color: #c68d5e;
+}
+/********FIN PAGE NOTRE HISTOIRE*******/
