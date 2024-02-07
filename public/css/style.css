@@ -199,6 +199,8 @@ footer ul{
     height: 30px;
     margin-top: 10px;
 }
+
+
 /***********************************************END FOOTER*****************************************************/
 /************************************************INDEX********************************************************/
 body {
@@ -459,15 +461,8 @@ input[type=text], [type=datetime-local],[type=number], textarea{
      margin: 50px;
     border-radius: 5%;
 }
-@media screen AND (max-width: 400px){
-    #randoDetail figure img{
-        max-width: 100%;
-        height: 100px;
-        margin: 20px;
-        border: blue;
-    }
+
     
-}
 #randoDetail .firstLineTitle{
     color: #c68d5e;
     font-size: 50px;
@@ -670,13 +665,12 @@ align-items: center;
 margin: 30px;
 border: 2 px solid green;
 }      
+
 #conseils aside figure img {
 
 max-width: 450px;
 }
 #conseils aside button{
-
-
 margin-top: 30px;
 background-color:#DC5527;
 color: #FFF3E6;
@@ -696,14 +690,15 @@ font-size: 14px;
 #conseils .firstLineTitle{
 color: #c68d5e;
 font-size: 30px;
-text-indent:10% 
-
+text-indent:10%;
+font-family: yesevaOne;
 }
     
 #conseils .secondLineTitle{
     color: #4b570d;
     font-size: 60px;
     margin-bottom: 10px;
+    font-family: yesevaOne;
 }
 #focusConseils_1{
     max-height: 350px ;
@@ -863,6 +858,20 @@ margin: 0 auto;
 
 /* CATA RANDO  */
 
+
+.cataRando.firstLineTitle{
+    color: #c68d5e;
+    font-size: 40px;
+    
+}
+    
+.cantoRando.secondLineTitle{
+         color: #4b570d;
+        margin-bottom: 5px;
+        padding: 20px;
+        font-size: 60px;
+} 
+
 .cataRando #section1R {
     border-bottom: 1px solid #C68D5E;
     padding-bottom: 10px;
@@ -955,7 +964,11 @@ margin: 0 auto;
     margin-left: 15px;
 }
 
-/****************************************Formulaire de connexion*******************************************/
+
+
+/* CONNEXION */
+
+/*Formulaire de connexion*/
 #mainConnexion {
     display: flex;
 }
@@ -963,14 +976,16 @@ margin: 0 auto;
 #mainConnexion figure{
 width: 50%;
 display: flex;
-justify-content: center;
+#container
 padding: 0 35 px;
- }
+}
 /*img barbapapa connexion*/
 #mainConnexion .imgConnex{
     max-width: 90%;
     margin-bottom: 10px;
  }
+
+
 /*container général*/
 #container {
   align-items: center;
@@ -978,6 +993,9 @@ padding: 0 35 px;
 }
 /*div du formulaire connexion*/
 #connexion  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
     align-items: center;
@@ -989,7 +1007,7 @@ padding: 0 35 px;
     margin-top: 50px;
  margin-bottom: 50px;
     font-size: 60px;
-   
+    font-family: yesevaOne;  
 }
 /* Inputs du formulaire Connexion*/ 
 #mailConnnex {
@@ -1035,6 +1053,22 @@ padding: 0 35 px;
     text-decoration: underline;
      margin: 10px;
 } 
+/* Inputs du formulaire Connexion*/
+#formConnexion input {
+    border: 2px #C68D5E solid;
+    border-radius: 10px;
+    background-color: #FFF3E6;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 300px; /* Largeur fixe des champs */
+    margin: 0 auto; /* Centre les champs horizontalement */
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+
+
 
 /*Trait "Ligne vert après Modifier MDP"*/
 hr {
@@ -1090,28 +1124,9 @@ justify-content: center;
     padding-top: 50px;
     font-size: 60px;
 }
-/* Inputs du formulaire Inscription*/
-#formInsc input {
-    border :2px #C68D5E solid;
-    border-radius: 10px;
-    background-color: #FFF3E6 ;
-    box-sizing: border-box;
-    padding: 10px;
-    width: calc(50% - 24px);
-    margin-bottom: 10px;
-    width: 300px;
-}
 
-#formInsc label {
-/*    color: #683614;
-    font-size: 14px;
-    display: block;*/
-    display: none;
-}
 
-#formInsc label[for="registration_form_agreeTerms"] {
-    display: block;
-}
+
 
 #agreeTerms {
     color: #683614;
@@ -1299,146 +1314,49 @@ background-color: #FFF7EE;
     border-radius: 20px;
   
 }
-/*******************************************Début mentions légales***************************************************/
-/*********Titre de la page******************/
-#mainMentions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url("/img/barbapapaadmin.png");
-    background-size:contain; /*prend la taille de conteneur */
-    background-position: right;
-    background-repeat: no-repeat;
+
+@media screen and (max-width:600px){
+    .imgConnex{
+        display: none;
+}}   
+ 
+
+
+@media screen and (max-width: 600px) {
+    footer section div {
+        text-align: center; 
+    }
+    
+    footer section {
+        flex-direction: column; 
+        text-align: center; 
+    }
+    
+    #mainConnexion .h1Titre {
+    font-size: 30px;
+    }
+
+    #mainConnexion{
+        display: flex;
+
+    }
+    #mainConnexion figure{
+        width: 0%;
+        display: flex;
+        padding: 0 35 px;
+    }
+        
+    #container {
+         align-items: center;
+        width: 100%; 
+    }
+    nav{
+      display: none; 
+   }
+
+   footer{
    
-}
-#mainMentions .firstLineTitle{
-    color: #c68d5e;
-    font-size: 50px;
-    text-align: center;
-    text-indent: -10%;
-    
-}  
-#mainMentions .secondLineTitle{
-    color: #4b570d;
-    margin-bottom: 5px;
-    padding: 20px;
-    font-size: 60px;
-    text-align: center;
-}
-.scroll-section {
-    max-height: 70vh;
-    overflow-y: scroll;
-    text-align: justify;
-    padding: 20px;
-    margin:5%;
-}
-.gros-paragraphe {
-    font-size: 18px; /* Ajustez la taille de police selon vos besoins */
-    line-height: 1.52; /* Utilisez un nombre pour le multiple de la taille de police */
-    /* Ou utilisez une valeur fixe comme line-height: 24px; */
-}
-/*************DEBUT PAGE NOTRE HISTOIRE*******/
-body {
-    background-color: #FFF7EE;
-    height: 100vh;
-}
-/**** Il y a 2 élements dont une image dans cette section d'ou l'utilisation de space-between 
-        contrairement a la section 2 ou il n'y a pas d'image donc j'ai utilisé un space-around pour que ca soit 
-        plus aéré****/
-/* section {
-    height: 80vh;
-    /* width: 100vh; */
-#section1 {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 60px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-#section2 {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 60px;
-    align-items: center;
+    margin-top: 20px;
     
 }
-#section3 {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 60px;
-    margin-top: 30px;
-    align-items: center;
 }
-/****Taille de la photo de groupe*****/
-.photoGroupe {
-    height: 80vh;
-    margin-right: 0px;
-    border-radius: 10px;
-}
-.pontForêt{
-    height: 80vh;
-    border-radius: 10px;
-}
-.montDesRecollets {
-    height: 80vh;
-    margin-bottom: 60px;
-    margin-right: 60px;
-    margin-left: 30px;
-    border-radius: 10px;
-}
-/*******Pour donner une forme aux paragraphes******/
-.paragraphe {
-    width: 110vh;
-    display: flex;
-    flex-direction: column;  
-    padding-bottom: 50px;
-    padding-left: 50px;
-    
-}
-#mainHistoire h1 {
-    color: #4b570d;
-    font-size: 50px; 
-}
-#mainHistoire h1::first-line{
-    color: #c68d5e;
-}
-/********FIN PAGE NOTRE HISTOIRE*******/
-/*************************************************MEDIA QUERY INDEX******************************************/
-@media screen and (max-width : 760px ){
-    body {
-    }
-}
-
-@media screen and (max-width : 400px ){
-    #mainIndex section:nth-of-type(1) div img {
-        display:none;
-    }
-
-    .soeureinement::first-line {
-        font-size : 30px;
-    }
-    #mainIndex section:nth-of-type(2) img {
-        display: none;
-    }
-    #mainIndex section:nth-of-type(3) img {
-
-        display: none;
-    }
-    #mainIndex .firstLineTitle{
-        font-size: 30px;
-    
-    }  
-    #mainIndex .secondLineTitle{
-        font-size: 30px;
-    }
-    h4 {
-        font-size: 18px;
-    }
-    .texte p{
-        font-size: 12px;
-    }
-}
-
-
-/*************************************************MEDIA QUERY INDEX******************************************/
