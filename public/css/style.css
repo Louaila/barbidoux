@@ -951,9 +951,9 @@ margin: 0 auto;
 /*Formulaire de connexion*/
 #mainConnexion {
     display: flex;
-    flex-wrap: wrap; /* Permet à flex items de passer à la ligne s'ils ne rentrent pas */
-    /* align-items: self-start; */
+
 }
+
 /*container de la figure*/
 #mainConnexion figure{
 width: 50%;
@@ -963,31 +963,34 @@ padding: 0 35 px;
  }
 /*img barbapapa connexion*/
 #mainConnexion .imgConnex{
-    max-width: 100%;
+    max-width: 90%;
+    margin-bottom: 10px;
  }
 /*container général*/
 #container {
+  align-items: center;
     width: 50%; /*width:100% ; Utiliser la largeur totale sur les petits écrans */
 }
 /*div du formulaire connexion*/
- #conInsc  {
+#conInsc  {
     text-align: center;
     width: 100%;
+
 }
 /*Centrer le titre et lui donner couleur*/
 #mainConnexion .h1Titre {
     color: #4B570D;
     margin-top: 50px;
-    margin-bottom: 50px;
-    padding-top: 50px;
+ margin-bottom: 50px;
     font-size: 60px;
+   
 }
 /* Inputs du formulaire Connexion*/ 
 #mailConnnex {
-        border :2px #C68D5E solid;
-        border-radius: 10px;
-        background-color: #FFF3E6 ;
-        box-sizing: border-box;
+   border :2px #C68D5E solid;
+    border-radius: 10px;
+    background-color: #FFF3E6 ;
+    box-sizing: border-box;
     
     }
 /* Bouton Se Connecter*/
@@ -1000,8 +1003,9 @@ padding: 0 35 px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
-    display: block;
+    display: block; 
 }
+
 #btnSeConnecter:hover{
     background-color: #FF5C24;
 }
@@ -1011,8 +1015,8 @@ padding: 0 35 px;
     margin-bottom: 5%;
     padding: 5px;  
     text-decoration: underline;
-    margin: 10px;
-}
+     margin: 10px;
+} 
 
 label{
     display: block;
@@ -1025,8 +1029,7 @@ hr {
   }
 /* Bouton "Je m'inscris" */
 #btnJeMinscris {
-   /* display: block;*/
-    margin: 0 auto;
+ margin: 0 auto; 
     background-color: #DC5527;
     color: #fff7ee;
     padding: 10px 20px;
@@ -1034,10 +1037,13 @@ hr {
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
-   /* width: 15%;*/
+   
 }
 #btnJeMinscris:hover{
     background-color: #FF5C24;
+}
+input {
+    margin-bottom: 10px;
 }
 /********************************************Inscription*********************************************/
 #mainInscription {
@@ -1078,15 +1084,18 @@ justify-content: center;
     background-color: #FFF3E6 ;
     box-sizing: border-box;
     padding: 10px;
+    width: calc(50% - 24px);
+    margin-bottom: 15px;
+    width: 300px;
 }
-#formInsc label{
-    color:#683614;
-    font-size: 16px;
-    display: block;
-    margin-bottom: 5%;
-    padding: 5px;
-    margin: 10px;
+
+
+#formInsc label {
+    color: #683614;
+    font-size: 14px;
+    display: block; 
 }
+
 .aInsc:hover{
     font-size: 16px;
     display: block;
@@ -1094,9 +1103,9 @@ justify-content: center;
     padding: 5px;
     text-decoration: underline;
 }
+
 #btnsInscrire {
-    display: block;
-    margin: 0 auto;
+   margin: 0 auto;
     background-color: #DC5527;
     color: #FFF7EE;
     padding: 10px 20px;
@@ -1193,8 +1202,7 @@ justify-content: center;
     
 }
 .infoRando{
-
-    margin-left: 20px;
+   margin-left: 20px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -1267,6 +1275,6 @@ background-color: #FFF7EE;
     margin-top: 20px;
     background-color: #FFF3E6;
     border-radius: 20px;
-   
+  
 }
 
