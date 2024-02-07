@@ -1,5 +1,6 @@
 function monProfil() {
     document.getElementById("modifUser").style.display = "block";
+    document.getElementById("modifUser").style.display = "flex";
     document.getElementById("mesRandos").style.display = "none";
     document.getElementById("Objectifs").style.display = "none";
     document.getElementById("bMesObj").style.backgroundColor = "#C68D5E";

@@ -40,8 +40,8 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $nName = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $birthUser = null;
-
+    private ?\DateTimeInterface $birthUser;
+//on va tester de changer en not null
     public function getId(): ?int
     {
         return $this->id;
