@@ -262,8 +262,9 @@ h4 {
     height: 60vw;
     max-height:600px;  
     margin-top: 20px;
+    display:block;
 }
-#mainIndex .soeureinement::first-line{
+#mainIndex .soeureinement{
     color: #4B570D;
     font-size: 60px;
     margin-bottom: 10px;
@@ -282,6 +283,7 @@ h4 {
 #mainIndex section:nth-of-type(2) img {
     height: 60vw;
     max-height:600px;
+    display: block;
 }
 #mainIndex section:nth-of-type(2).texte {
         margin-left: 70px;
@@ -1394,11 +1396,49 @@ body {
     padding-left: 50px;
     
 }
-h1 {
+#mainHistoire h1 {
     color: #4b570d;
     font-size: 50px; 
 }
-h1::first-line{
+#mainHistoire h1::first-line{
     color: #c68d5e;
 }
 /********FIN PAGE NOTRE HISTOIRE*******/
+/*************************************************MEDIA QUERY INDEX******************************************/
+@media screen and (max-width : 760px ){
+    body {
+    }
+}
+
+@media screen and (max-width : 400px ){
+    #mainIndex section:nth-of-type(1) div img {
+        display:none;
+    }
+
+    .soeureinement::first-line {
+        font-size : 30px;
+    }
+    #mainIndex section:nth-of-type(2) img {
+        display: none;
+    }
+    #mainIndex section:nth-of-type(3) img {
+
+        display: none;
+    }
+    #mainIndex .firstLineTitle{
+        font-size: 30px;
+    
+    }  
+    #mainIndex .secondLineTitle{
+        font-size: 30px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    .texte p{
+        font-size: 12px;
+    }
+}
+
+
+/*************************************************MEDIA QUERY INDEX******************************************/
