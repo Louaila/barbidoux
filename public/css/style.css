@@ -437,10 +437,6 @@ input[type=text], [type=datetime-local],[type=number], textarea{
     font-size: 14px;
     margin-top: 10px;
 }
-    
-    
-
-    
 #randoDetail main section ol{
     margin-top: 15px;
     margin-bottom: 10px;
@@ -468,9 +464,7 @@ input[type=text], [type=datetime-local],[type=number], textarea{
 #randoDetail .firstLineTitle{
     color: #c68d5e;
     font-size: 50px;
-}
-        
-        
+}     
 #randoDetail .secondLineTitle{
     color: #4b570d;
     margin-bottom: 5px;
@@ -487,8 +481,6 @@ input[type=text], [type=datetime-local],[type=number], textarea{
 #randoDetail section p {
     line-height: 20px;   
 }
-    
-    
 #avis{
      margin-top: 40px;
     padding: 20px;
@@ -765,15 +757,15 @@ margin: 0 auto;
 
 } 
  
-/********* END CONSEILS *************/
+/*************************************** END CONSEILS *************************************************************/
 
 
 
-/************************************DEBUT TABLEAU DE BORD**************************************/
+/****************************************DEBUT TABLEAU DE BORD****************************************************/
 #mainTdeBord{
     display: flex;
 }
-/************************************DEBUT MODIF IMGNOM USER**************************************/
+/************************************DEBUT MODIF IMGNOM USER*****************************************************/
 #imgNomUserGuide{
     
     width: 20%;
@@ -950,12 +942,10 @@ margin: 0 auto;
     margin-left: 15px;
 }
 
-/*Formulaire de connexion*/
+/****************************************Formulaire de connexion*******************************************/
 #mainConnexion {
     display: flex;
-
 }
-
 /*container de la figure*/
 #mainConnexion figure{
 width: 50%;
@@ -974,9 +964,10 @@ padding: 0 35 px;
     width: 50%; /*width:100% ; Utiliser la largeur totale sur les petits écrans */
 }
 /*div du formulaire connexion*/
-#conInsc  {
+#connexion  {
     text-align: center;
     width: 100%;
+    align-items: center;
 
 }
 /*Centrer le titre et lui donner couleur*/
@@ -995,6 +986,18 @@ padding: 0 35 px;
     box-sizing: border-box;
     
     }
+    #formConnexion input {
+        border: 2px #C68D5E solid;
+        border-radius: 10px;
+        background-color: #FFF3E6;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 300px; /* Largeur fixe des champs */
+        margin: 0 auto; /* Centre les champs horizontalement */
+        margin-bottom: 10px;
+        display: block;
+    }
+    
 /* Bouton Se Connecter*/
 #btnSeConnecter{
     margin: 0 auto;
@@ -1020,9 +1023,6 @@ padding: 0 35 px;
      margin: 10px;
 } 
 
-label{
-    display: block;
-}
 /*Trait "Ligne vert après Modifier MDP"*/
 hr {
         width: 40%; /* Définir la largeur de la ligne horizontale */
@@ -1044,9 +1044,7 @@ hr {
 #btnJeMinscris:hover{
     background-color: #FF5C24;
 }
-input {
-    margin-bottom: 10px;
-}
+
 /********************************************Inscription*********************************************/
 #mainInscription {
     display: flex;
@@ -1079,7 +1077,7 @@ justify-content: center;
     padding-top: 50px;
     font-size: 60px;
 }
-/* Inputs du formulaire Connexion*/
+/* Inputs du formulaire Inscription*/
 #formInsc input {
     border :2px #C68D5E solid;
     border-radius: 10px;
@@ -1087,17 +1085,26 @@ justify-content: center;
     box-sizing: border-box;
     padding: 10px;
     width: calc(50% - 24px);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     width: 300px;
 }
 
-
 #formInsc label {
-    color: #683614;
+/*    color: #683614;
     font-size: 14px;
-    display: block; 
+    display: block;*/
+    display: none;
 }
 
+#formInsc label[for="registration_form_agreeTerms"] {
+    display: block;
+}
+
+#agreeTerms {
+    color: #683614;
+    font-size: 14px;
+    display: block;
+}
 .aInsc:hover{
     font-size: 16px;
     display: block;

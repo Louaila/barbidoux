@@ -11,20 +11,18 @@
 
 
     {{ form_errors(registrationForm) }}
+    <div id="formInsc">
+        {{ form_start(registrationForm) }}
 
-    {{ form_start(registrationForm) }}
-
-        {{ form_row(registrationForm.lastnameUser, { 'id' : 'testid'}) }}
-        {{ form_row(registrationForm.nameUser) }}
-        {{ form_row(registrationForm.birthUser) }}
-        {{ form_row(registrationForm.mailUser) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+            
+            {{ form_row(registrationForm.nameUser, {'attr': {'placeholder': 'Prenom', 'id': 'prenomInsc'} }) }}
+                {{ form_row(registrationForm.lastnameUser, { 'attr': {'placeholder': 'Nom', 'id': 'nomInsc'} }) }}
+                {{ form_row(registrationForm.mailUser, { 'attr': {'placeholder': 'E-mail', 'id': 'emailInsc'} }) }}
+                {{ form_row(registrationForm.plainPassword, {'attr': {'placeholder': 'Mot de passe', 'id': 'mdpInsc'} }) }}
+                {{ form_row(registrationForm.agreeTerms, {'attr': {'id': 'agreeTerms'} }) }}
+            <button type="submit" class="btn" id="btnsInscrire" size="40">S'inscrire</button>
+        {{ form_end(registrationForm) }}
+    </div>
 
             <hr>
             <br>
@@ -38,3 +36,4 @@
 </main>
 
 {% endblock %}
+
