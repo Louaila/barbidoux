@@ -7,19 +7,16 @@
 <main id="mainConnexion">
     <!-----container de tous les divs-------------->
     <div id="container">
-        <div id="conInsc">
+        <div id="connexion">
 
-        <form method="post" id="formInsc" >
+        <form method="post" id="formConnexion" >
             <!---------------Titre de la page-------->
             <h1 class="h1Titre">Je me connecte</h1>
             <!-------Formulaire de connexion------------------>
-            <label for="inputMailUser">Email</label>
-            <input type="text" size="30" value="{{ last_username }}" name="mailUser" id="inputMailUser" class="form-control" autocomplete="username" required autofocus>
+            
+            <input type="text" size="30"  value="{{ last_username }}" name="mailUser" id="inputMailUser" class="form-control" autocomplete="username" required autofocus placeholder="Email" >
            
-            <label for="inputPassword">Mot de passe</label>
-            <input type="password" size="30" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
-
+            <input type="password" size="30" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder="Mot de passe">
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate')}}">
             
             <button id="btnSeConnecter" type="submit">Se connecter</button>

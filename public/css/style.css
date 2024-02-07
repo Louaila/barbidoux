@@ -196,6 +196,8 @@ footer ul{
     height: 30px;
     margin-top: 10px;
 }
+
+
 /***********************************************END FOOTER*****************************************************/
 /************************************************INDEX********************************************************/
 body {
@@ -456,15 +458,8 @@ input[type=text], [type=datetime-local],[type=number], textarea{
      margin: 50px;
     border-radius: 5%;
 }
-@media screen AND (max-width: 400px){
-    #randoDetail figure img{
-        max-width: 100%;
-        height: 100px;
-        margin: 20px;
-        border: blue;
-    }
+
     
-}
 #randoDetail .firstLineTitle{
     color: #c68d5e;
     font-size: 50px;
@@ -671,13 +666,12 @@ align-items: center;
 margin: 30px;
 border: 2 px solid green;
 }      
+
 #conseils aside figure img {
 
 max-width: 450px;
 }
 #conseils aside button{
-
-
 margin-top: 30px;
 background-color:#DC5527;
 color: #FFF3E6;
@@ -697,14 +691,15 @@ font-size: 14px;
 #conseils .firstLineTitle{
 color: #c68d5e;
 font-size: 30px;
-text-indent:10% 
-
+text-indent:10%;
+font-family: yesevaOne;
 }
     
 #conseils .secondLineTitle{
     color: #4b570d;
     font-size: 60px;
     margin-bottom: 10px;
+    font-family: yesevaOne;
 }
 #focusConseils_1{
     max-height: 350px ;
@@ -858,6 +853,20 @@ margin: 0 auto;
 
 /* CATA RANDO  */
 
+
+.cataRando.firstLineTitle{
+    color: #c68d5e;
+    font-size: 40px;
+    
+}
+    
+.cantoRando.secondLineTitle{
+         color: #4b570d;
+        margin-bottom: 5px;
+        padding: 20px;
+        font-size: 60px;
+} 
+
 .cataRando #section1R {
     border-bottom: 1px solid #C68D5E;
     padding-bottom: 10px;
@@ -950,6 +959,10 @@ margin: 0 auto;
     margin-left: 15px;
 }
 
+
+
+/* CONNEXION */
+
 /*Formulaire de connexion*/
 #mainConnexion {
     display: flex;
@@ -960,21 +973,26 @@ margin: 0 auto;
 #mainConnexion figure{
 width: 50%;
 display: flex;
-justify-content: center;
+#container
 padding: 0 35 px;
- }
+}
 /*img barbapapa connexion*/
 #mainConnexion .imgConnex{
     max-width: 90%;
     margin-bottom: 10px;
  }
+
+
 /*container général*/
 #container {
   align-items: center;
     width: 50%; /*width:100% ; Utiliser la largeur totale sur les petits écrans */
 }
 /*div du formulaire connexion*/
-#conInsc  {
+#connexion  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
 
@@ -985,7 +1003,7 @@ padding: 0 35 px;
     margin-top: 50px;
  margin-bottom: 50px;
     font-size: 60px;
-   
+    font-family: yesevaOne;  
 }
 /* Inputs du formulaire Connexion*/ 
 #mailConnnex {
@@ -1019,10 +1037,23 @@ padding: 0 35 px;
     text-decoration: underline;
      margin: 10px;
 } 
-
-label{
+/* Inputs du formulaire Connexion*/
+#formConnexion input {
+    border: 2px #C68D5E solid;
+    border-radius: 10px;
+    background-color: #FFF3E6;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 300px; /* Largeur fixe des champs */
+    margin: 0 auto; /* Centre les champs horizontalement */
+    margin-bottom: 10px;
     display: block;
 }
+
+
+
+
+
 /*Trait "Ligne vert après Modifier MDP"*/
 hr {
         width: 40%; /* Définir la largeur de la ligne horizontale */
@@ -1044,9 +1075,7 @@ hr {
 #btnJeMinscris:hover{
     background-color: #FF5C24;
 }
-input {
-    margin-bottom: 10px;
-}
+
 /********************************************Inscription*********************************************/
 #mainInscription {
     display: flex;
@@ -1079,24 +1108,9 @@ justify-content: center;
     padding-top: 50px;
     font-size: 60px;
 }
-/* Inputs du formulaire Connexion*/
-#formInsc input {
-    border :2px #C68D5E solid;
-    border-radius: 10px;
-    background-color: #FFF3E6 ;
-    box-sizing: border-box;
-    padding: 10px;
-    width: calc(50% - 24px);
-    margin-bottom: 15px;
-    width: 300px;
-}
 
 
-#formInsc label {
-    color: #683614;
-    font-size: 14px;
-    display: block; 
-}
+
 
 .aInsc:hover{
     font-size: 16px;
@@ -1280,3 +1294,48 @@ background-color: #FFF7EE;
   
 }
 
+@media screen and (max-width:600px){
+    .imgConnex{
+        display: none;
+}}   
+ 
+
+
+@media screen and (max-width: 600px) {
+    footer section div {
+        text-align: center; 
+    }
+    
+    footer section {
+        flex-direction: column; 
+        text-align: center; 
+    }
+    
+    #mainConnexion .h1Titre {
+    font-size: 30px;
+    }
+
+    #mainConnexion{
+        display: flex;
+
+    }
+    #mainConnexion figure{
+        width: 0%;
+        display: flex;
+        padding: 0 35 px;
+    }
+        
+    #container {
+         align-items: center;
+        width: 100%; 
+    }
+    nav{
+      display: none; 
+   }
+
+   footer{
+   
+    margin-top: 20px;
+    
+}
+}
