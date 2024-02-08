@@ -1004,7 +1004,7 @@ padding: 0 35 px;
         display: block;
     }
     
-/* Bouton Se Connecter*/
+/* Bouton Se Connecter************/
 #btnSeConnecter{
     margin: 0 auto;
     background-color: #DC5527;
@@ -1071,7 +1071,7 @@ justify-content: center;
 }
 /*div du formulaire Inscription*/
 #Inscription {
-    width: 120%;
+    width: 100%;
     text-align: center;
     margin-left: 10%;
 }
