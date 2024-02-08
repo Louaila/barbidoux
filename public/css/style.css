@@ -1398,6 +1398,18 @@ body {
 }
 
 @media screen and (max-width : 400px ){
+    header nav ul li{
+        display: none;
+    }
+    header nav ul li:nth-of-type(5){
+        display: block;
+    }
+
+    #mainIndex section:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+    }
+
     #mainIndex section:nth-of-type(1) div img {
         display:none;
     }
@@ -1405,8 +1417,19 @@ body {
     .soeureinement::first-line {
         font-size : 30px;
     }
+    #mainIndex section:nth-of-type(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #mainIndex section:nth-of-type(2) img {
         display: none;
+    }
+    #mainIndex section:nth-of-type(3) {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #mainIndex section:nth-of-type(3) img {
 
@@ -1424,6 +1447,9 @@ body {
     }
     .texte p{
         font-size: 12px;
+    }
+    #mainIndex .focus{
+        display: none;
     }
 }
 
