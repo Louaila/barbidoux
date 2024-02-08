@@ -763,99 +763,6 @@ margin: 0 auto;
 
 
 
-/****************************************DEBUT TABLEAU DE BORD****************************************************/
-#mainTdeBord{
-    display: flex;
-}
-#mainTdeBord .h1Titre {
-    color: #4B570D;
-    margin-top: 50px;
- margin-bottom: 50px;
-    font-size: 60px;
-}
-/************************************DEBUT MODIF IMGNOM USER*****************************************************/
-#imgNomUserGuide{
-    
-    width: 20%;
-    text-align: center;
-    padding-left: 20px;
-}
-#mainGuide #imgNomUserGuide img{
-    width: 10em;
-    height: 10em;
-    border-radius: 100%;
-}
-#mainGuide #imgNomUserGuide div{
-    border: 1px solid;
-    border-radius: 50px;
-    text-align: center;
-    margin-top: 10px;
-    padding: 5px;
-    font-family: ralewayBold;
-
-}
-/************************************FIN MODIF IMGNOM USER**************************************/
-/************************************DEBUT MODIF RANDO USER **************************************/
-#mainGuide #infoGuide{
-    
-    max-width: 100%;
-    background-image: url("/img/barbapapaAdmin.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-
-}
-#mainGuide #mesButtonGuide{
-    display: flex;
-    justify-content: center;
-}
-
-
-#mainGuide #monPlanning button:hover{
-    background-color: #FF5C24;
-}
-#mainGuide #monPlanning{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 50%;
-}
-
-#mainGuide #monGroupe{
-    display: none
-}
-
-#mainGuide #monGroupeGuide{
-    border: 1px solid #683614;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    padding-top:10px;
-    padding-bottom:10px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: #FFF3E6;
-    border-radius: 20px;
-   
-}
-    
-#mainGuide #mesButtonGuide button{
-    background-color: #DC5527;
-    color: #FFF3E6;
-    padding: 10px 20px;
-    display: block;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
-    margin-right: 20px;
-}
-
-#mainGuide #mesButtonGuide button:hover{
-    background-color: #FF5C24;
-}
-
 /* CATA RANDO  */
 
 
@@ -1124,9 +1031,28 @@ justify-content: center;
     padding-top: 50px;
     font-size: 60px;
 }
+/* Inputs du formulaire Inscription*/
+#formInsc input {
+    border :2px #C68D5E solid;
+    border-radius: 10px;
+    background-color: #FFF3E6 ;
+    box-sizing: border-box;
+    padding: 10px;
+    width: calc(50% - 24px);
+    margin-bottom: 10px;
+    width: 300px;
+}
 
+#formInsc label {
+/*    color: #683614;
+    font-size: 14px;
+    display: block;*/
+    display: none;
+}
 
-
+#formInsc label[for="registration_form_agreeTerms"] {
+    display: block;
+}
 
 #agreeTerms {
     color: #683614;
@@ -1158,6 +1084,9 @@ justify-content: center;
 }
 /************************************************FIN INSCRIPTION***************************************************************************/
 
+/************************************************FIN INSCRIPTION***************************************************************************/
+
+/* TABLEAU DE BORD  */
 #mainTdeBord{
     display: flex;
 }
@@ -1315,6 +1244,93 @@ background-color: #FFF7EE;
   
 }
 
+/* 
+GUIDE */
+/************************************DEBUT MODIF IMGNOM USER*****************************************************/
+#imgNomUserGuide{
+    
+    width: 20%;
+    text-align: center;
+    padding-left: 20px;
+}
+#mainGuide #imgNomUserGuide img{
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+}
+#mainGuide #imgNomUserGuide div{
+    border: 1px solid;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    font-family: ralewayBold;
+
+}
+/************************************FIN MODIF IMGNOM USER**************************************/
+/************************************DEBUT MODIF RANDO USER **************************************/
+#mainGuide #infoGuide{
+    
+    max-width: 100%;
+    background-image: url("/img/barbapapaAdmin.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+}
+#mainGuide #mesButtonGuide{
+    display: flex;
+    justify-content: center;
+}
+
+
+#mainGuide #monPlanning button:hover{
+    background-color: #FF5C24;
+}
+#mainGuide #monPlanning{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#mainGuide #monGroupe{
+    display: none
+}
+
+#mainGuide #monGroupeGuide{
+    border: 1px solid #683614;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #FFF3E6;
+    border-radius: 20px;
+   
+}
+    
+#mainGuide #mesButtonGuide button{
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#mainGuide #mesButtonGuide button:hover{
+    background-color: #FF5C24;
+}
+
+
+
 @media screen and (max-width:600px){
     .imgConnex{
         display: none;
@@ -1360,3 +1376,5 @@ background-color: #FFF7EE;
     
 }
 }
+
+

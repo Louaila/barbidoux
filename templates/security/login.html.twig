@@ -13,10 +13,12 @@
             <!---------------Titre de la page-------->
             <h1 class="h1Titre">Je me connecte</h1>
             <!-------Formulaire de connexion------------------>
-            
-            <input type="text" size="30"  value="{{ last_username }}" name="mailUser" id="inputMailUser" class="form-control" autocomplete="username" required autofocus placeholder="Email" >
-           
-            <input type="password" size="30" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder="Mot de passe">
+    
+            <input type="text" size="30" value="{{ last_username }}" name="mailUser" id="inputMailUser" class="form-control" autocomplete="username" required autofocus placeholder ="Email">
+          
+            <input type="password" size="30" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder ="Mot de pasee">
+
+
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate')}}">
             
             <button id="btnSeConnecter" type="submit">Se connecter</button>
