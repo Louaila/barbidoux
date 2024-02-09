@@ -11,21 +11,23 @@ html{
 a{
     text-decoration: none;
     color: #4B570D;
+    font-family: ralewayRegular;
 }
 ul{
     list-style: none;
 }
 p{
     color:#683614 ;
+    font-family: ralewayRegular;
 }
 /*******************************************************FONTS*******************************************/
 @font-face {
     font-family: 'yesevaOne';
-    src: url('/fonts/YesevaOne-Regular.eot');
-    src: url('/fonts/YesevaOne-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/YesevaOne-egular.woff2') format('woff2'),
-        url('/fonts/YesevaOne-Regular.woff') format('woff'),
-        url('/fonts/YesevaOne-Regular.ttf') format('truetype');
+    src: url('../fonts/YesevaOne-Regular.eot');
+    src: url('../fonts/YesevaOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YesevaOne-Regular1.woff2') format('woff2'),
+        url('../fonts/YesevaOne-Regular2.woff') format('woff'),
+        url('../fonts/YesevaOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -67,7 +69,7 @@ p{
     font-family: 'ralewayRegular';
     src: url('../fonts/Raleway-Regular.eot');
     src: url('../fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Raleway-Regular.woff2') format('woff2'),
+        url('../fonts/Raleway-Regular2.woff2') format('woff2'),
         url('../fonts/Raleway-Regular.woff') format('woff'),
         url('../fonts/Raleway-Regular.ttf') format('truetype');
     font-weight: normal;
@@ -128,6 +130,7 @@ header nav ul a{
     font-size: 16px;
     text-decoration: none;
     color: #4B570D;
+    font-family: ralewayRegular;
 }
 header nav ul li:nth-child(4) {/***petit trait */
     color: #683614; /* Couleur marron */
@@ -196,6 +199,8 @@ footer ul{
     height: 30px;
     margin-top: 10px;
 }
+
+
 /***********************************************END FOOTER*****************************************************/
 /************************************************INDEX********************************************************/
 body {
@@ -215,6 +220,7 @@ h4 {
     color: #c68d5e;
     margin-top: 15px;
     font-size: 25px;
+    font-family: ralewayRegular;
 }
 
 #mainIndex .texte h2 {
@@ -238,14 +244,16 @@ h4 {
     color: #c68d5e;
     font-size: 40px;
     text-indent:-5% ;
-    border-radius: 2px solid black;
-    }
+    font-family: yesevaOne;
+
+}
     
-#mainIndex.secondLineTitle{
+#mainIndex .secondLineTitle{
     color: #4b570d;
      margin-bottom: 5px;
      padding: 20px;
     font-size: 60px;
+    font-family: yesevaOne;
 }
 /******************************************DEBUT SECTION 1********************************/
 #mainIndex section:nth-of-type(1) {
@@ -256,11 +264,13 @@ h4 {
     height: 60vw;
     max-height:600px;  
     margin-top: 20px;
+    display:block;
 }
-#mainIndex .soeureinement::first-line{
+#mainIndex .soeureinement{
     color: #4B570D;
     font-size: 60px;
     margin-bottom: 10px;
+    font-family: yesevaOne;
 }
 #mainIndex section:nth-of-type(1) .texte {
     margin-left: 70px;
@@ -275,6 +285,7 @@ h4 {
 #mainIndex section:nth-of-type(2) img {
     height: 60vw;
     max-height:600px;
+    display: block;
 }
 #mainIndex section:nth-of-type(2).texte {
         margin-left: 70px;
@@ -435,10 +446,6 @@ input[type=text], [type=datetime-local],[type=number], textarea{
     font-size: 14px;
     margin-top: 10px;
 }
-    
-    
-
-    
 #randoDetail main section ol{
     margin-top: 15px;
     margin-bottom: 10px;
@@ -454,21 +461,12 @@ input[type=text], [type=datetime-local],[type=number], textarea{
      margin: 50px;
     border-radius: 5%;
 }
-@media screen AND (max-width: 400px){
-    #randoDetail figure img{
-        max-width: 100%;
-        height: 100px;
-        margin: 20px;
-        border: blue;
-    }
+
     
-}
 #randoDetail .firstLineTitle{
     color: #c68d5e;
     font-size: 50px;
-}
-        
-        
+}     
 #randoDetail .secondLineTitle{
     color: #4b570d;
     margin-bottom: 5px;
@@ -485,8 +483,6 @@ input[type=text], [type=datetime-local],[type=number], textarea{
 #randoDetail section p {
     line-height: 20px;   
 }
-    
-    
 #avis{
      margin-top: 40px;
     padding: 20px;
@@ -669,13 +665,12 @@ align-items: center;
 margin: 30px;
 border: 2 px solid green;
 }      
+
 #conseils aside figure img {
 
 max-width: 450px;
 }
 #conseils aside button{
-
-
 margin-top: 30px;
 background-color:#DC5527;
 color: #FFF3E6;
@@ -695,14 +690,15 @@ font-size: 14px;
 #conseils .firstLineTitle{
 color: #c68d5e;
 font-size: 30px;
-text-indent:10% 
-
+text-indent:10%;
+font-family: yesevaOne;
 }
     
 #conseils .secondLineTitle{
     color: #4b570d;
     font-size: 60px;
     margin-bottom: 10px;
+    font-family: yesevaOne;
 }
 #focusConseils_1{
     max-height: 350px ;
@@ -763,98 +759,25 @@ margin: 0 auto;
 
 } 
  
-/********* END CONSEILS *************/
+/*************************************** END CONSEILS *************************************************************/
 
 
-
-/************************************DEBUT TABLEAU DE BORD**************************************/
-#mainTdeBord{
-    display: flex;
-}
-/************************************DEBUT MODIF IMGNOM USER**************************************/
-#imgNomUserGuide{
-    
-    width: 20%;
-    text-align: center;
-    padding-left: 20px;
-}
-#mainGuide #imgNomUserGuide img{
-    width: 10em;
-    height: 10em;
-    border-radius: 100%;
-}
-#mainGuide #imgNomUserGuide div{
-    border: 1px solid;
-    border-radius: 50px;
-    text-align: center;
-    margin-top: 10px;
-    padding: 5px;
-    font-family: ralewayBold;
-
-}
-/************************************FIN MODIF IMGNOM USER**************************************/
-/************************************DEBUT MODIF RANDO USER **************************************/
-#mainGuide #infoGuide{
-    
-    max-width: 100%;
-    background-image: url("/img/barbapapaAdmin.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-
-}
-#mainGuide #mesButtonGuide{
-    display: flex;
-    justify-content: center;
-}
-
-
-#mainGuide #monPlanning button:hover{
-    background-color: #FF5C24;
-}
-#mainGuide #monPlanning{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 50%;
-}
-
-#mainGuide #monGroupe{
-    display: none
-}
-
-#mainGuide #monGroupeGuide{
-    border: 1px solid #683614;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    padding-top:10px;
-    padding-bottom:10px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: #FFF3E6;
-    border-radius: 20px;
-   
-}
-    
-#mainGuide #mesButtonGuide button{
-    background-color: #DC5527;
-    color: #FFF3E6;
-    padding: 10px 20px;
-    display: block;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
-    margin-right: 20px;
-}
-
-#mainGuide #mesButtonGuide button:hover{
-    background-color: #FF5C24;
-}
 
 /* CATA RANDO  */
+
+
+.cataRando.firstLineTitle{
+    color: #c68d5e;
+    font-size: 40px;
+    
+}
+    
+.cantoRando.secondLineTitle{
+         color: #4b570d;
+        margin-bottom: 5px;
+        padding: 20px;
+        font-size: 60px;
+} 
 
 .cataRando #section1R {
     border-bottom: 1px solid #C68D5E;
@@ -948,48 +871,71 @@ margin: 0 auto;
     margin-left: 15px;
 }
 
+
+
+/* CONNEXION */
+
 /*Formulaire de connexion*/
 #mainConnexion {
     display: flex;
-    flex-wrap: wrap; /* Permet à flex items de passer à la ligne s'ils ne rentrent pas */
-    /* align-items: self-start; */
 }
 /*container de la figure*/
 #mainConnexion figure{
 width: 50%;
 display: flex;
-justify-content: center;
+#container
 padding: 0 35 px;
- }
+}
 /*img barbapapa connexion*/
 #mainConnexion .imgConnex{
-    max-width: 100%;
+    max-width: 90%;
+    margin-bottom: 10px;
  }
+
+
 /*container général*/
 #container {
+  align-items: center;
     width: 50%; /*width:100% ; Utiliser la largeur totale sur les petits écrans */
 }
 /*div du formulaire connexion*/
- #conInsc  {
+#connexion  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
+    align-items: center;
+
 }
 /*Centrer le titre et lui donner couleur*/
 #mainConnexion .h1Titre {
     color: #4B570D;
     margin-top: 50px;
-    margin-bottom: 50px;
-    padding-top: 50px;
+ margin-bottom: 50px;
     font-size: 60px;
+    font-family: yesevaOne;  
 }
 /* Inputs du formulaire Connexion*/ 
 #mailConnnex {
-        border :2px #C68D5E solid;
-        border-radius: 10px;
-        background-color: #FFF3E6 ;
-        box-sizing: border-box;
+   border :2px #C68D5E solid;
+    border-radius: 10px;
+    background-color: #FFF3E6 ;
+    box-sizing: border-box;
     
     }
+    #formConnexion input {
+        border: 2px #C68D5E solid;
+        border-radius: 10px;
+        background-color: #FFF3E6;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 300px; /* Largeur fixe des champs */
+        margin: 0 auto; /* Centre les champs horizontalement */
+        margin-bottom: 10px;
+        display: block;
+    }
+    
 /* Bouton Se Connecter*/
 #btnSeConnecter{
     margin: 0 auto;
@@ -1000,8 +946,9 @@ padding: 0 35 px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
-    display: block;
+    display: block; 
 }
+
 #btnSeConnecter:hover{
     background-color: #FF5C24;
 }
@@ -1011,12 +958,25 @@ padding: 0 35 px;
     margin-bottom: 5%;
     padding: 5px;  
     text-decoration: underline;
-    margin: 10px;
-}
-
-label{
+     margin: 10px;
+} 
+/* Inputs du formulaire Connexion*/
+#formConnexion input {
+    border: 2px #C68D5E solid;
+    border-radius: 10px;
+    background-color: #FFF3E6;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 300px; /* Largeur fixe des champs */
+    margin: 0 auto; /* Centre les champs horizontalement */
+    margin-bottom: 10px;
     display: block;
 }
+
+
+
+
+
 /*Trait "Ligne vert après Modifier MDP"*/
 hr {
         width: 40%; /* Définir la largeur de la ligne horizontale */
@@ -1025,8 +985,7 @@ hr {
   }
 /* Bouton "Je m'inscris" */
 #btnJeMinscris {
-   /* display: block;*/
-    margin: 0 auto;
+ margin: 0 auto; 
     background-color: #DC5527;
     color: #fff7ee;
     padding: 10px 20px;
@@ -1034,11 +993,12 @@ hr {
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
-   /* width: 15%;*/
+   
 }
 #btnJeMinscris:hover{
     background-color: #FF5C24;
 }
+
 /********************************************Inscription*********************************************/
 #mainInscription {
     display: flex;
@@ -1071,21 +1031,33 @@ justify-content: center;
     padding-top: 50px;
     font-size: 60px;
 }
-/* Inputs du formulaire Connexion*/
+/* Inputs du formulaire Inscription*/
 #formInsc input {
     border :2px #C68D5E solid;
     border-radius: 10px;
     background-color: #FFF3E6 ;
     box-sizing: border-box;
     padding: 10px;
+    width: calc(50% - 24px);
+    margin-bottom: 10px;
+    width: 300px;
 }
-#formInsc label{
-    color:#683614;
-    font-size: 16px;
+
+#formInsc label {
+/*    color: #683614;
+    font-size: 14px;
+    display: block;*/
+    display: none;
+}
+
+#formInsc label[for="registration_form_agreeTerms"] {
     display: block;
-    margin-bottom: 5%;
-    padding: 5px;
-    margin: 10px;
+}
+
+#agreeTerms {
+    color: #683614;
+    font-size: 14px;
+    display: block;
 }
 .aInsc:hover{
     font-size: 16px;
@@ -1094,9 +1066,9 @@ justify-content: center;
     padding: 5px;
     text-decoration: underline;
 }
+
 #btnsInscrire {
-    display: block;
-    margin: 0 auto;
+   margin: 0 auto;
     background-color: #DC5527;
     color: #FFF7EE;
     padding: 10px 20px;
@@ -1112,6 +1084,9 @@ justify-content: center;
 }
 /************************************************FIN INSCRIPTION***************************************************************************/
 
+/************************************************FIN INSCRIPTION***************************************************************************/
+
+/* TABLEAU DE BORD  */
 #mainTdeBord{
     display: flex;
 }
@@ -1193,8 +1168,7 @@ justify-content: center;
     
 }
 .infoRando{
-
-    margin-left: 20px;
+   margin-left: 20px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -1267,6 +1241,140 @@ background-color: #FFF7EE;
     margin-top: 20px;
     background-color: #FFF3E6;
     border-radius: 20px;
+  
+}
+
+/* 
+GUIDE */
+/************************************DEBUT MODIF IMGNOM USER*****************************************************/
+#imgNomUserGuide{
+    
+    width: 20%;
+    text-align: center;
+    padding-left: 20px;
+}
+#mainGuide #imgNomUserGuide img{
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+}
+#mainGuide #imgNomUserGuide div{
+    border: 1px solid;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    font-family: ralewayBold;
+
+}
+/************************************FIN MODIF IMGNOM USER**************************************/
+/************************************DEBUT MODIF RANDO USER **************************************/
+#mainGuide #infoGuide{
+    
+    max-width: 100%;
+    background-image: url("/img/barbapapaAdmin.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+}
+#mainGuide #mesButtonGuide{
+    display: flex;
+    justify-content: center;
+}
+
+
+#mainGuide #monPlanning button:hover{
+    background-color: #FF5C24;
+}
+#mainGuide #monPlanning{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#mainGuide #monGroupe{
+    display: none
+}
+
+#mainGuide #monGroupeGuide{
+    border: 1px solid #683614;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #FFF3E6;
+    border-radius: 20px;
    
 }
+    
+#mainGuide #mesButtonGuide button{
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#mainGuide #mesButtonGuide button:hover{
+    background-color: #FF5C24;
+}
+
+
+
+@media screen and (max-width:600px){
+    .imgConnex{
+        display: none;
+}}   
+ 
+
+
+@media screen and (max-width: 600px) {
+    footer section div {
+        text-align: center; 
+    }
+    
+    footer section {
+        flex-direction: column; 
+        text-align: center; 
+    }
+    
+    #mainConnexion .h1Titre {
+    font-size: 30px;
+    }
+
+    #mainConnexion{
+        display: flex;
+
+    }
+    #mainConnexion figure{
+        width: 0%;
+        display: flex;
+        padding: 0 35 px;
+    }
+        
+    #container {
+         align-items: center;
+        width: 100%; 
+    }
+    nav{
+      display: none; 
+   }
+
+   footer{
+   
+    margin-top: 20px;
+    
+}
+}
+
 

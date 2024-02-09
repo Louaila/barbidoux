@@ -49,7 +49,7 @@
             <div id="modifUser">
                 <div id="formUser">
 
-<h1>FOMURLAIRE</h1>
+<h1 class="h1Titre">Mon profil</h1>
 
   {{ form_errors(updateForm) }}
     {{ form_start(updateForm) }}
@@ -58,8 +58,15 @@
         {{ form_row(updateForm.nameUser) }}    
         {{ form_row(updateForm.nName) }}
         <!-- Add other form fields as needed -->
-        <button type="submit" class="btn">Update</button>
+        <button type="submit" class="btn">Mettre à jour</button>
     {{ form_end(updateForm) }}
+ 
+{# Bouton de suppression de compte #}
+                <form action="{{ path('app_deleteUser', {id: app.user.id}) }}" method="post" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ?');">
+                    <button type="submit" class="btn btn-danger">Supprimer mon compte</button>
+                </form>
+
+    
 
 <h1>FIN FOMURLAIRE</h1>
 

@@ -6,7 +6,7 @@
         {# Section 1 #}
         <section>
             <div class="texte">
-                <p class="soeureinement">Soeureinement</p>
+                <h1 class="soeureinement">Soeureinement</h1>
                 <h4>Vivez pleinement avancez soeureinement</h4>
                 <p>Tout a commencé avec Laura, une passionnée de randonnée, de bien-être et d'autonomisation féminine.</p>
                 <br>
@@ -31,14 +31,14 @@
                 Elle a constaté que de nombreuses femmes hésitaient à se lancer dans la randonnée en raison de divers
                 obstacles, allant de la sécurité personnelle à l'anxiété liée à l'aventure en plein air. </p>
             <br>
-            {# <a href="http://localhost/soeureinement/pages/cataRando.php">Découvrir nos randonnées</a> #}
+            <a href="{{ path('app_hike') }}">Nos randonnées</a>
         </div>
     </section>
     
     {# Section 3 #}
     <section>
         <div class="texte">
-                <h3 class="firstLineTitle">Votre</h2>
+                <h3 class="firstLineTitle">Votre</h3>
                 <h2 class="secondLineTitle">Bien-être </h2>
                
                 <p>
@@ -50,7 +50,7 @@
                     la beauté qui les entourait. La nature leur offrait un spectacle vibrant de couleurs et de sons.
                 </p>
                 <br>
-                {# <a href="http://localhost/soeureinement/pages/ateliers.html">Nos ateliers</a> #}
+                <a href="{{ path('app_notre_histoire') }}">Nos ateliers</a>
         </div>
         <div>
             <img src="{{ asset('/img/img_bienEtre1.png')}}" alt="imagebienetre">
@@ -75,10 +75,7 @@
                 les entourait. La nature leur offrait un spectacle vibrant de couleurs et de sons.
             </p>
             <br>
-            {# <a href="http://localhost/soeureinement/pages/conseils.php">Nos conseils</a> #}
+            <a href="{{ path('app_hike') }}">Nos Randonnées</a>
         </div>
-
-
-    
 </main>
 {% endblock %}

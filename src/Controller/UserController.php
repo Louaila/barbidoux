@@ -7,8 +7,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\TableauBordType;
+use App\Entity\Users;
+use Symfony\Component\Security\Core\Authentication\TokenStorageInterface;
 
 class UserController extends AbstractController
 {
@@ -64,6 +67,26 @@ class UserController extends AbstractController
         return $this->redirectToRoute('app_login');
 
     }
+
+    #[Route('/deleteUser/{id}', name: 'app_deleteUser')]
+    public function deleteUser(Request $request, int $id): Response
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $user = $entityManager->getRepository(Users::class)->find($id);
+
+
+        if (!$user) {
+            throw $this->createNotFoundException('User not found');
+        }
+
+        // Supprimer l'utilisateur
+        $entityManager->remove($user);
+        $entityManager->flush();
+
+        // Rediriger vers une page de confirmation ou ailleurs
+        return $this->redirectToRoute('app_login');
+    }
+
 
     #[Route(path: '/logout', name: 'app_logout')]
     public function logout(): void
